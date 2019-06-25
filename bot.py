@@ -1,4 +1,4 @@
-import json, nltk, discord, asyncio, random
+import json, nltk, discord, asyncio, random, os
 import urllib.request as urllib
 from functools import reduce
 
@@ -34,4 +34,4 @@ async def on_message(message):
         bee_fact = GetBeeFact()
         await client.send_message(message.channel, bee_fact)
 
-client.run('MzEwNjAxMDc0OTc5NTA0MTMw.C_AVVA.8mxwn69Kpngxq5zLpFwEEQ5kV_w')
+client.run(os.environ['BEEBOTTOKEN'])
